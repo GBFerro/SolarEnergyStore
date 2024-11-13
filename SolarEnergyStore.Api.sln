@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarEnergyStore.Models", "SolarEnergyStore.Models\SolarEnergyStore.Models.csproj", "{5CFAFDA3-2DD0-4C1C-AEB6-70800A993F6E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarEnergyStore.Api", "SolarEnergyStore.Api\SolarEnergyStore.Api.csproj", "{B3591F3F-EC42-4BAE-A3EE-0B9CA03E0BD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarEnergyStore.Repositories", "SolarEnergyStore.Repository\SolarEnergyStore.Repositories.csproj", "{8D4F47B5-DD3F-41FF-8CD7-26814BB7C20F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarEnergyStore.Tests", "SolarEnergyStore.Tests\SolarEnergyStore.Tests.csproj", "{253D7479-7495-4FEE-9138-936F66859743}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarEnergyStore.Services", "SolarEnergyStore.Services\SolarEnergyStore.Services.csproj", "{C08AC41C-F66F-4314-9765-9B2320865319}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CFAFDA3-2DD0-4C1C-AEB6-70800A993F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFAFDA3-2DD0-4C1C-AEB6-70800A993F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFAFDA3-2DD0-4C1C-AEB6-70800A993F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFAFDA3-2DD0-4C1C-AEB6-70800A993F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3591F3F-EC42-4BAE-A3EE-0B9CA03E0BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3591F3F-EC42-4BAE-A3EE-0B9CA03E0BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3591F3F-EC42-4BAE-A3EE-0B9CA03E0BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3591F3F-EC42-4BAE-A3EE-0B9CA03E0BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4F47B5-DD3F-41FF-8CD7-26814BB7C20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4F47B5-DD3F-41FF-8CD7-26814BB7C20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4F47B5-DD3F-41FF-8CD7-26814BB7C20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4F47B5-DD3F-41FF-8CD7-26814BB7C20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253D7479-7495-4FEE-9138-936F66859743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253D7479-7495-4FEE-9138-936F66859743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253D7479-7495-4FEE-9138-936F66859743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253D7479-7495-4FEE-9138-936F66859743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08AC41C-F66F-4314-9765-9B2320865319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08AC41C-F66F-4314-9765-9B2320865319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08AC41C-F66F-4314-9765-9B2320865319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08AC41C-F66F-4314-9765-9B2320865319}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6156DF8A-A7BB-4E0F-AA33-2437AC927C9F}
+	EndGlobalSection
+EndGlobal
