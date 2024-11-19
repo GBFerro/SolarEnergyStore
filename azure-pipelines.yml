@@ -8,12 +8,49 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
+  name: 'Default'
+  demands: []
+
+variables:
+  buildConfiguration: 'Release'
+  imageName: 'meuprojeto'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+# 1. Restaurar dependências
+- task: UseDotNet@2
+  inputs:
+    version: '8.x' # Usando .NET 8
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+
+# 2. Build do Projeto
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+
+# 3. Testes Unitários
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*.Tests.csproj'
+    arguments: '--configuration $(buildConfiguration) --logger trx'
+
+# 4. Construção da Imagem Docker
+- task: Docker@2
+  inputs:
+    containerRegistry: 'solar'
+    repository: 'teste'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
+
+# 5. Publicar Artefatos
+- publish: $(System.DefaultWorkingDirectory)
+  artifact: 'drop'
