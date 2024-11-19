@@ -1,0 +1,16 @@
+services:
+  solarenergyapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - DefaultConnection=Server=tcp:teste-solar.database.windows.net,1433;Initial Catalog=SolarEnergyStoreDb;Persist Security Info=False;User ID=gfsa;Password=Gf1526@,;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+    volumes:
+      - ./appsettings.docker.json:/app/appsettings.docker.json:ro
+
+networks:
+  solar_network:
+    driver: bridge
