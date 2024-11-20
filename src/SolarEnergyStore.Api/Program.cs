@@ -72,5 +72,4 @@ using (var scope = app.Services.CreateScope())
     // Aplica as migrations automaticamente
     dbContext.Database.Migrate();
 }
-
 app.Run();
